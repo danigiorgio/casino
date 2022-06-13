@@ -10,13 +10,7 @@
       "version": "detect"
     }
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended",
-    "plugin:jsx-a11y/recommended"
-  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:react-hooks/recommended"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -33,12 +27,12 @@
     "react/react-in-jsx-scope": "off",
     "no-console": "warn",
     "padding-line-between-statements": [
-        "error",
-        {
-          "blankLine": "always",
-          "prev": "*",
-          "next": "return"
-        }
-      ]
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      }
+    ]
   }
 }
