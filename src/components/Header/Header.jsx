@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useMutation } from 'react-query';
-import { getUser, getUsername } from '@/utils/storage';
+import { getUser, getUsername, removeUser } from '@/utils/storage';
 import apiClient from '@/services/apiClient';
 
 import UserProfile from '@/components/UserProfile';
@@ -21,8 +21,7 @@ const Header = ({ search, handleOnChange }) => {
     },
     {
       onSuccess: () => {
-        localStorage.removeItem('username');
-        localStorage.removeItem('user');
+        removeUser();
         navigate('/login');
       },
       onError: () => {

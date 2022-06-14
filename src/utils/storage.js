@@ -8,4 +8,9 @@ const getUser = () => {
 
 const getUsername = () => localStorage.getItem('username');
 
-export { setUser, getUser, getUsername };
+const removeUser = () => {
+  localStorage.removeItem('username');
+  localStorage.removeItem('user');
+};
+
+export { setUser, getUser, getUsername, removeUser };
