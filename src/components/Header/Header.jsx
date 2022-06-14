@@ -43,7 +43,7 @@ const Header = ({ search, handleOnChange }) => {
           </Link>
         </div>
         <div className="four wide column">
-          <SearchBar value={search} handleOnChange={handleOnChange} />
+          <SearchBar className="search" value={search} handleOnChange={handleOnChange} />
         </div>
       </header>
     </>

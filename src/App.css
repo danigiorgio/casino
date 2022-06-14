@@ -16,3 +16,14 @@ body {
 .search {
   float: right;
 }
+
+@media only screen and (max-width: 767px) {
+  .container:has(form) {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+  .container > .ui.grid:has(form) {
+    align-content: center;
+  }
+}

@@ -1,0 +1,13 @@
+@media screen and (max-width: 767px) {
+  .game iframe {
+    width: calc(150% + 30px);
+    height: 300px;
+  }
+  .game .ui.button {
+    font-size: 0.8em;
+    width: 80px;
+  }
+  .btn {
+    order: 1;
+  }
+}
