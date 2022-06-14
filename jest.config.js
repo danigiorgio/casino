@@ -8,5 +8,7 @@ module.exports = {
   moduleNameMapper: {
     '^@/root(.*)$': '<rootDir>/src$1',
     '^@/components(.*)$': '<rootDir>/src/components$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss)$': 'identity-obj-proxy',
   },
 };
