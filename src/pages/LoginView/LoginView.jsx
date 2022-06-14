@@ -7,12 +7,15 @@ import apiClient from '@/services/apiClient';
 
 import Input from '@/components/Input';
 import Button from '@/components/Button';
+import Error from '@/components/Error';
 
 const LoginView = () => {
   const navigate = useNavigate();
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [formError, setFormError] = useState('');
 
   const { mutate: login } = useMutation(
     async () => {
@@ -34,9 +37,21 @@ const LoginView = () => {
     },
   );
 
+  const isFormValid = () => {
+    if (!username || !password) {
+      setFormError('Please fill in all fields.');
+
+      return false;
+    }
+
+    return true;
+  };
+
   const handleLogin = (e) => {
     e.preventDefault();
-    login();
+    if (isFormValid()) {
+      login();
+    }
   };
 
   return (
@@ -74,17 +89,19 @@ const LoginView = () => {
           </div>
           <div className="field">
             <div className="ui icon input">
-              <Button className="secondary right floated" type="button" value="Login" onClick={handleLogin}>
+              <Button
+                className="secondary right floated"
+                type="button"
+                value="Login"
+                onClick={(e) => handleLogin(e)}
+              >
                 Log In
                 <i className="right chevron icon"></i>
               </Button>
             </div>
           </div>
-          {error && (
-            <div className="ui error message">
-              <div className="header">{capitalize(error)}.</div>
-            </div>
-          )}
+          {error && <Error>{capitalize(error)}</Error>}
+          {!error && formError && <Error>{formError}</Error>}
         </div>
       </form>
     </div>
