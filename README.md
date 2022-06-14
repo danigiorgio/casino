@@ -1,16 +1,12 @@
 <h1 align="center">🎲CasinoApp🎲</h1>
 
- <p align="center">A React app for playing online casino games.</p>
-
-<br />
-
----
+## <p align="center">A React app for playing online casino games.</p>
 
 # :rocket: Features
 
 - Login and logout functionality.
 - Protected routes: main Games Page and Play Game Page.
-- Search games by game title and category.
+- Search games by game title and description.
 - Filter games by categories.
 - Launch games in /play route.
 
