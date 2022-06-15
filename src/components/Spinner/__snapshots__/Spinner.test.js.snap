@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Spinner /> should render Spinner 1`] = `
+<div
+  class="ui active inverted dimmer"
+>
+  <div
+    class="ui text loader"
+  />
+</div>
+`;
