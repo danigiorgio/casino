@@ -7,7 +7,9 @@ export function fetchGames() {
   return axios
     .get(url, { method: 'get' })
     .then((res) => res.data)
-    .catch((err) => err);
+    .catch(() => {
+      throw new Error('Something went wrong');
+    });
 }
 
 export default { fetchGames };

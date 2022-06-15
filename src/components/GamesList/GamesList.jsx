@@ -4,9 +4,13 @@ import GameItem from '@/components/GameItem';
 import Spinner from '@/components/Spinner';
 
 const GamesList = ({ isLoading, error, filteredGames }) => {
-  if (isLoading) return <Spinner text="Loading..." />;
+  if (isLoading) {
+    return <Spinner text="Loading..." />;
+  }
 
-  if (error) return <div className="ui message">There was an error fetching the data.</div>;
+  if (error) {
+    return <div className="ui message">There was an error fetching the data.</div>;
+  }
 
   return filteredGames?.length ? (
     <>
