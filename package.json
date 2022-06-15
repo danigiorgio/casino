@@ -1,8 +1,11 @@
 {
-  "name": "app",
-  "description": "This is a React app.",
+  "name": "casino",
+  "description": "A React app for playing online casino games.",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": {
+    "name": "Daniela Giorgio"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

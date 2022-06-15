@@ -81,7 +81,7 @@ Here's some tips:
 - Check the [issues page](https://github.com/danigiorgio/casino/issues) for already opened issues (or maybe even closed ones) that might already address your question/bug/feature request.
 - Feature requests are welcomed! Provide some details on why it would be helpful for you and others, explain how you're using bull-board and if possible even some screenshots if you are willing to mock something!
 
-# :closed_book: License
+# :closed_book: Author
 
 Copyright © 2022 [Daniela Giorgio](https://github.com/danigiorgio).<br />
 [Linkedin](https://linkedin.com/in/danielagiorgio) |
