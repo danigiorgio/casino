@@ -9,6 +9,7 @@ import Header from '@/components/Header';
 
 const GamesView = () => {
   const queryConfig = {
+    /* We define how long a query is considered fresh. As long as it's fresh, data will come from the cache. */
     staleTime: 1000 * 60 * 60 * 8,
     refetchOnWindowFocus: false,
   };
