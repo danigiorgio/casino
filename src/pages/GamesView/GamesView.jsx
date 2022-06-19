@@ -14,7 +14,7 @@ const GamesView = () => {
     refetchOnWindowFocus: false,
   };
 
-  const { isLoading, error, data: games } = useQuery('games', fetchGames, queryConfig);
+  const { data: games, isLoading, isError } = useQuery('games', fetchGames, queryConfig);
   const { data: categories } = useQuery('categories', fetchCategories, queryConfig);
 
   const [category, setCategory] = useState(0);
@@ -40,7 +40,7 @@ const GamesView = () => {
       <Header handleOnChange={handleOnChange} value={search} />
       <main className="ui grid">
         <article className="twelve wide column">
-          <GamesList filteredGames={filteredGames} isLoading={isLoading} error={error} />
+          <GamesList filteredGames={filteredGames} isLoading={isLoading} isError={isError} />
         </article>
         <Categories categories={categories} selected={category} setCategory={setCategory} />
       </main>

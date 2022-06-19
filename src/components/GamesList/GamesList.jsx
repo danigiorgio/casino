@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import GameItem from '@/components/GameItem';
 import Spinner from '@/components/Spinner';
 
-const GamesList = ({ isLoading, error, filteredGames }) => {
+const GamesList = ({ isLoading, isError, filteredGames }) => {
   if (isLoading) {
     return <Spinner text="Loading..." />;
   }
 
-  if (error) {
+  if (isError) {
     return <div className="ui message">There was an error fetching the data.</div>;
   }
 
@@ -28,7 +28,7 @@ const GamesList = ({ isLoading, error, filteredGames }) => {
 
 GamesList.propTypes = {
   isLoading: PropTypes.bool,
-  error: PropTypes.object,
+  isError: PropTypes.bool,
   filteredGames: PropTypes.array,
 };
 

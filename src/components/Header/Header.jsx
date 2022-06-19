@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useMutation } from 'react-query';
 import { getUser, getUsername, removeUser } from '@/utils/storage';
 import apiClient from '@/services/apiClient';
